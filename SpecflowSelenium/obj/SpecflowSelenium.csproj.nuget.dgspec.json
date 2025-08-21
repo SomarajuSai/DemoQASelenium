@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iray\\source\\repos\\SpecflowSelenium\\SpecflowSelenium\\SpecflowSelenium.csproj": {}
+    "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\SpecflowSelenium.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iray\\source\\repos\\SpecflowSelenium\\SpecflowSelenium\\SpecflowSelenium.csproj": {
+    "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\SpecflowSelenium.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iray\\source\\repos\\SpecflowSelenium\\SpecflowSelenium\\SpecflowSelenium.csproj",
+        "projectUniqueName": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\SpecflowSelenium.csproj",
         "projectName": "SpecflowSelenium",
-        "projectPath": "C:\\Users\\iray\\source\\repos\\SpecflowSelenium\\SpecflowSelenium\\SpecflowSelenium.csproj",
+        "projectPath": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\SpecflowSelenium.csproj",
         "packagesPath": "C:\\Users\\iray\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iray\\source\\repos\\SpecflowSelenium\\SpecflowSelenium\\obj\\",
+        "outputPath": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iray\\AppData\\Roaming\\NuGet\\NuGet.Config",
