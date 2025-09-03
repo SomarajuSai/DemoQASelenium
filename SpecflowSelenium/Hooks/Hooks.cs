@@ -10,13 +10,13 @@ namespace SpecflowSelenium.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            driverInitializer(); // Test commit
+            driverInitializer();
         }
 
-        [AfterScenario]
-        public void AfterScenario()
-        {
-            driver?.Quit();
-        }
+        //[AfterScenario]
+        //public void AfterScenario()
+        //{
+        //    driver?.Quit();
+        //}
     }
 }
