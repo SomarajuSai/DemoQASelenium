@@ -64,9 +64,9 @@ namespace SpecflowSelenium.StepDefinitions
         }
 
         [Then(@"I Validate the all details")]
-        public void ThenIValidateTheAllDetails()
+        public void ThenIValidateTheAllDetails(Table TableDetails)
         {
-            elementsPage.ValidateTheDetails();
+            elementsPage.ValidateTheDetails(TableDetails);
         }
 
         [When(@"I add the details in Web Tables")]
@@ -75,12 +75,18 @@ namespace SpecflowSelenium.StepDefinitions
             elementsPage.EnterTheWebTableDetails(Details);
         }
 
+        [Then(@"I Validate the entered details")]
+        public void ThenIValidateTheEnteredDetails(Table table)
+        {
+            elementsPage.ValidateTheDetails(table);
+        }
 
         [Then(@"I Validate the Regestration Form details")]
-        public void ThenIValidateTheRegestrationFormDetails()
+        public void ThenIValidateTheRegestrationFormDetails(Table table)
         {
-            elementsPage.ValidateTheRegestrationFormDetails();
+            elementsPage.ValidateTheRegistrationFormDetails(table);
         }
+
 
     }
 }

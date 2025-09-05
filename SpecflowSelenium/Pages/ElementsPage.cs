@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace SpecflowSelenium.Pages
 {
@@ -85,22 +86,6 @@ namespace SpecflowSelenium.Pages
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", submit);
         }
 
-        public void ValidateTheDetails()
-        {
-
-            string actualName = driver.FindElement(outputName).Text.Replace("Name:", "").Trim();
-            string actualEmail = driver.FindElement(outputEmail).Text.Replace("Email:", "").Trim();
-            string actualCurrAddr = driver.FindElement(outputCurrentAddress).Text.Replace("Current Address :", "").Trim();
-            string actualPermAddr = driver.FindElement(outputPermanentAddress).Text.Replace("Permananet Address :", "").Trim();
-
-            Assert.AreEqual(expName, actualName, "Name does not match!");
-            Assert.AreEqual(expEmail, actualEmail, "Email does not match!");
-            Assert.AreEqual(expCurrAddr, actualCurrAddr, "Current Address does not match!");
-            Assert.AreEqual(expPermAddr, actualPermAddr, "Permanent Address does not match!");
-
-        }
-
-
         public void ValidateTheWebTablePage(string ExpectedResult)
         {
             var actualFunctionName = driver.FindElement(By.XPath("//h1[@class='text-center']")).Text;
@@ -125,15 +110,61 @@ namespace SpecflowSelenium.Pages
             driver.FindElement(salary).SendKeys(data["Salary"]);
             driver.FindElement(department).SendKeys(data["Department"]);
 
-            driver.FindElement(subBtn).Click();
+            //driver.FindElement(subBtn).Click();
         }
 
-       public void ValidateTheRegestrationFormDetails()
+       public void  ValidateTheDetails(Table table)
        {
+            var row = table.Rows[0];
 
+            string expectedName = row["FullName"];
+            string expectedEmail = row["Email"];
+            string expectedCurrentAddress = row["CurrentAddress"];
+            string expectedPermanentAddress = row["PermanentAddress"];
 
-       }
+            // Fetch actual output text
+            string actualName = driver.FindElement(outputName).Text.Replace("Name:", "").Trim();
+            string actualEmail = driver.FindElement(outputEmail).Text.Replace("Email:", "").Trim();
+            string actualCurrentAddress = driver.FindElement(outputCurrentAddress).Text.Replace("Current Address :", "").Trim();
+            string actualPermanentAddress = driver.FindElement(outputPermanentAddress).Text.Replace("Permananet Address :", "").Trim();
 
+            // Assertions
+            Assert.AreEqual(expectedName, actualName, $"❌ FullName mismatch! Expected: {expectedName}, Found: {actualName}");
+            Assert.AreEqual(expectedEmail, actualEmail, $"❌ Email mismatch! Expected: {expectedEmail}, Found: {actualEmail}");
+            Assert.AreEqual(expectedCurrentAddress, actualCurrentAddress, $"❌ Current Address mismatch! Expected: {expectedCurrentAddress}, Found: {actualCurrentAddress}");
+            Assert.AreEqual(expectedPermanentAddress, actualPermanentAddress, $"❌ Permanent Address mismatch! Expected: {expectedPermanentAddress}, Found: {actualPermanentAddress}");
+
+        }
+
+        public void ValidateTheRegistrationFormDetails(Table table)
+        {
+            var row = table.Rows[0];
+
+            string expectedFirstName = row["First Name"];
+            string expectedLastName = row["Last Name"];
+            string expectedEmail = row["Email"];
+            string expectedAge = row["Age"];
+            string expectedSalary = row["Salary"];
+            string expectedDepartment = row["Department"];
+
+            // Get actual values from form input fields
+            string actualFirstName = driver.FindElement(firstName).GetAttribute("value").Trim();
+            string actualLastName = driver.FindElement(lastName).GetAttribute("value").Trim();
+            string actualEmail = driver.FindElement(userEmail).GetAttribute("value").Trim();
+            string actualAge = driver.FindElement(age).GetAttribute("value").Trim();
+            string actualSalary = driver.FindElement(salary).GetAttribute("value").Trim();
+            string actualDepartment = driver.FindElement(department).GetAttribute("value").Trim();
+
+            // Assertions
+            Assert.AreEqual(expectedFirstName, actualFirstName, $"❌ First Name mismatch! Expected: {expectedFirstName}, Found: {actualFirstName}");
+            Assert.AreEqual(expectedLastName, actualLastName, $"❌ Last Name mismatch! Expected: {expectedLastName}, Found: {actualLastName}");
+            Assert.AreEqual(expectedEmail, actualEmail, $"❌ Email mismatch! Expected: {expectedEmail}, Found: {actualEmail}");
+            Assert.AreEqual(expectedAge, actualAge, $"❌ Age mismatch! Expected: {expectedAge}, Found: {actualAge}");
+            Assert.AreEqual(expectedSalary, actualSalary, $"❌ Salary mismatch! Expected: {expectedSalary}, Found: {actualSalary}");
+            Assert.AreEqual(expectedDepartment, actualDepartment, $"❌ Department mismatch! Expected: {expectedDepartment}, Found: {actualDepartment}");
+            driver.FindElement(subBtn).Click();
+        }
     }
+    
     
 }  

@@ -134,6 +134,7 @@ C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\SpecflowSelenium
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\SpecflowSelenium.runtimeconfig.json
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\SpecflowSelenium.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\SpecflowSelenium.pdb
+C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\AngleSharp.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\BoDi.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\FluentAssertions.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\Gherkin.dll
@@ -150,11 +151,13 @@ C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\Newtonsoft.Json.
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\NuGet.Frameworks.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\nunit.framework.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\WebDriver.dll
+C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\TechTalk.SpecFlow.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\SpecFlow.Internal.Json.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\WebDriverManager.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Automation Projects\DemoQA\SpecflowSelenium\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll

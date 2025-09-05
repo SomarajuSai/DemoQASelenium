@@ -165,8 +165,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 13
     testRunner.When("I Enter the following details", ((string)(null)), table1, "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FullName",
+                            "Email",
+                            "CurrentAddress",
+                            "PermanentAddress"});
+                table2.AddRow(new string[] {
+                            "raj",
+                            "Raj@email.com",
+                            "Ayyappa society,Madhapur",
+                            "AP"});
 #line 16
- testRunner.Then("I Validate the all details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I Validate the entered details", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -179,7 +189,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Tables", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 18
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -199,40 +209,61 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 19
+#line 21
     testRunner.Given("Open DEMOQA Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
+#line 22
     testRunner.When("I Click On \'Elements\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
+#line 23
     testRunner.And("I Click On \'Web Tables\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 24
     testRunner.Then("I Validate the page \'Web Tables\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 23
+#line 25
     testRunner.When("I Click On \'Add\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "First Name",
                             "Last Name",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "raj",
                             "two",
                             "Raj@email.com",
                             "25",
                             "1",
                             "Tst"});
-#line 24
-    testRunner.And("I add the details in Web Tables", ((string)(null)), table2, "And ");
+                table3.AddRow(new string[] {
+                            "KOTI",
+                            "THREE",
+                            "FH@EMAIL.com",
+                            "26",
+                            "2",
+                            "tst"});
+#line 26
+    testRunner.And("I add the details in Web Tables", ((string)(null)), table3, "And ");
 #line hidden
-#line 27
-    testRunner.Then("I Validate the Regestration Form details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "First Name",
+                            "Last Name",
+                            "Email",
+                            "Age",
+                            "Salary",
+                            "Department"});
+                table4.AddRow(new string[] {
+                            "raj",
+                            "two",
+                            "Raj@email.com",
+                            "25",
+                            "1",
+                            "Tst"});
+#line 33
+    testRunner.Then("I Validate the Regestration Form details", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
