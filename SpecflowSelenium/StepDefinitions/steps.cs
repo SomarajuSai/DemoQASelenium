@@ -36,8 +36,7 @@ namespace SpecflowSelenium.StepDefinitions
                 else if (Page == "Web Tables")
                     elementsPage.ClickOnButton(Page);
 
-                else if (Page =="Add")
-                    elementsPage.ClickOnAddButton(Page);
+               
 
             }
 
@@ -81,10 +80,11 @@ namespace SpecflowSelenium.StepDefinitions
             elementsPage.ValidateTheDetails(table);
         }
 
-        [Then(@"I Validate the Regestration Form details")]
-        public void ThenIValidateTheRegestrationFormDetails(Table table)
+       
+        [Then(@"I Validate the Web Table details")]
+        public void ThenIValidateTheWebTableDetails(Table table)
         {
-            elementsPage.ValidateTheRegistrationFormDetails(table);
+            elementsPage.ValidateTheWebTableDetails(table);
         }
 
 

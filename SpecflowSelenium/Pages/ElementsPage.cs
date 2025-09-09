@@ -28,7 +28,7 @@ namespace SpecflowSelenium.Pages
 
         // Web Tables Registration Form Locators
         private By addButton = By.Id("addNewRecordButton");
-        private By firstName = By.Id("firstName"); 
+        private By firstName = By.Id("firstName");
         private By lastName = By.Id("lastName");
         private By userEmail = By.Id("userEmail");
         private By age = By.Id("age");
@@ -40,7 +40,7 @@ namespace SpecflowSelenium.Pages
         public void ValidateThePage(string ExpectedResult)
         {
 
-            var actualFunctionName = driver.FindElement(By.XPath("//div[@class=\"header-text\"]")).Text;
+            var actualFunctionName = driver.FindElement(By.XPath("//div[@class='header-text']")).Text;
             Assert.AreEqual(ExpectedResult, actualFunctionName,
             $"Expected function name to be '{ExpectedResult}' but found '{actualFunctionName}'");
 
@@ -48,8 +48,8 @@ namespace SpecflowSelenium.Pages
 
         public void ClickOnButton(string Page)
 
-        { 
-            
+        {
+
             driver.FindElement(By.XPath($"//span[text()='{Page}']")).Click();
 
         }
@@ -58,7 +58,7 @@ namespace SpecflowSelenium.Pages
         {
 
 
-            var actualElement = driver.FindElement(By.XPath("//h1[@class=\"text-center\"]"));
+            var actualElement = driver.FindElement(By.XPath("//h1[@class='text-center']"));
             var actualFunctionName = actualElement.Text.Trim();
 
             Assert.AreEqual(ExpectedResult, actualFunctionName,
@@ -93,28 +93,30 @@ namespace SpecflowSelenium.Pages
             $"Expected function name to be '{ExpectedResult}' but found '{actualFunctionName}'");
 
         }
-        public void  ClickOnAddButton(string Page)
-        {
 
-            driver.FindElement(By.XPath("//button[@id=\"addNewRecordButton\"]")).Click();
-        }
 
         public void EnterTheWebTableDetails(Table Details)
         {
-            var data = Details.Rows[0];
-            
-            driver.FindElement(firstName).SendKeys(data["First Name"]);
-            driver.FindElement(lastName).SendKeys(data["Last Name"]);
-            driver.FindElement(userEmail).SendKeys(data["Email"]);
-            driver.FindElement(age).SendKeys(data["Age"]);
-            driver.FindElement(salary).SendKeys(data["Salary"]);
-            driver.FindElement(department).SendKeys(data["Department"]);
 
-            //driver.FindElement(subBtn).Click();
+            foreach (var row in Details.Rows)
+            {
+
+                driver.FindElement(addButton).Click();
+
+                driver.FindElement(firstName).SendKeys(row["First Name"]);
+                driver.FindElement(lastName).SendKeys(row["Last Name"]);
+                driver.FindElement(userEmail).SendKeys(row["Email"]);
+                driver.FindElement(age).SendKeys(row["Age"]);
+                driver.FindElement(salary).SendKeys(row["Salary"]);
+                driver.FindElement(department).SendKeys(row["Department"]);
+
+                driver.FindElement(subBtn).Click();
+            }
+
         }
 
-       public void  ValidateTheDetails(Table table)
-       {
+        public void ValidateTheDetails(Table table)
+        {
             var row = table.Rows[0];
 
             string expectedName = row["FullName"];
@@ -122,13 +124,13 @@ namespace SpecflowSelenium.Pages
             string expectedCurrentAddress = row["CurrentAddress"];
             string expectedPermanentAddress = row["PermanentAddress"];
 
-            // Fetch actual output text
+
             string actualName = driver.FindElement(outputName).Text.Replace("Name:", "").Trim();
             string actualEmail = driver.FindElement(outputEmail).Text.Replace("Email:", "").Trim();
             string actualCurrentAddress = driver.FindElement(outputCurrentAddress).Text.Replace("Current Address :", "").Trim();
             string actualPermanentAddress = driver.FindElement(outputPermanentAddress).Text.Replace("Permananet Address :", "").Trim();
 
-            // Assertions
+
             Assert.AreEqual(expectedName, actualName, $"❌ FullName mismatch! Expected: {expectedName}, Found: {actualName}");
             Assert.AreEqual(expectedEmail, actualEmail, $"❌ Email mismatch! Expected: {expectedEmail}, Found: {actualEmail}");
             Assert.AreEqual(expectedCurrentAddress, actualCurrentAddress, $"❌ Current Address mismatch! Expected: {expectedCurrentAddress}, Found: {actualCurrentAddress}");
@@ -136,35 +138,38 @@ namespace SpecflowSelenium.Pages
 
         }
 
-        public void ValidateTheRegistrationFormDetails(Table table)
+       
+
+        public void ValidateTheWebTableDetails(Table table)
         {
-            var row = table.Rows[0];
+            
+            var webTableRows = driver.FindElements(By.XPath("//div[@class='rt-tbody']//div[@class='rt-tr-group']"));
 
-            string expectedFirstName = row["First Name"];
-            string expectedLastName = row["Last Name"];
-            string expectedEmail = row["Email"];
-            string expectedAge = row["Age"];
-            string expectedSalary = row["Salary"];
-            string expectedDepartment = row["Department"];
+            int offset = 3;
 
-            // Get actual values from form input fields
-            string actualFirstName = driver.FindElement(firstName).GetAttribute("value").Trim();
-            string actualLastName = driver.FindElement(lastName).GetAttribute("value").Trim();
-            string actualEmail = driver.FindElement(userEmail).GetAttribute("value").Trim();
-            string actualAge = driver.FindElement(age).GetAttribute("value").Trim();
-            string actualSalary = driver.FindElement(salary).GetAttribute("value").Trim();
-            string actualDepartment = driver.FindElement(department).GetAttribute("value").Trim();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                var expectedRow = table.Rows[i];
+                var webRow = webTableRows[i + offset];
 
-            // Assertions
-            Assert.AreEqual(expectedFirstName, actualFirstName, $"❌ First Name mismatch! Expected: {expectedFirstName}, Found: {actualFirstName}");
-            Assert.AreEqual(expectedLastName, actualLastName, $"❌ Last Name mismatch! Expected: {expectedLastName}, Found: {actualLastName}");
-            Assert.AreEqual(expectedEmail, actualEmail, $"❌ Email mismatch! Expected: {expectedEmail}, Found: {actualEmail}");
-            Assert.AreEqual(expectedAge, actualAge, $"❌ Age mismatch! Expected: {expectedAge}, Found: {actualAge}");
-            Assert.AreEqual(expectedSalary, actualSalary, $"❌ Salary mismatch! Expected: {expectedSalary}, Found: {actualSalary}");
-            Assert.AreEqual(expectedDepartment, actualDepartment, $"❌ Department mismatch! Expected: {expectedDepartment}, Found: {actualDepartment}");
-            driver.FindElement(subBtn).Click();
+                
+                var columns = webRow.FindElements(By.XPath(".//div[@class='rt-td']"));
+
+                string actualFirstName = columns[0].Text.Trim();
+                string actualLastName = columns[1].Text.Trim();
+                string actualAge = columns[2].Text.Trim();
+                string actualEmail = columns[3].Text.Trim();
+                string actualSalary = columns[4].Text.Trim();
+                string actualDepartment = columns[5].Text.Trim();
+
+                Assert.AreEqual(expectedRow["First Name"], actualFirstName, $"❌ First Name mismatch at row {i + 1}");
+                Assert.AreEqual(expectedRow["Last Name"], actualLastName, $"❌ Last Name mismatch at row {i + 1}");
+                Assert.AreEqual(expectedRow["Age"], actualAge, $"❌ Age mismatch at row {i + 1}");
+                Assert.AreEqual(expectedRow["Email"], actualEmail, $"❌ Email mismatch at row {i + 1}");
+                Assert.AreEqual(expectedRow["Salary"], actualSalary, $"❌ Salary mismatch at row {i + 1}");
+                Assert.AreEqual(expectedRow["Department"], actualDepartment, $"❌ Department mismatch at row {i + 1}");
+            }
         }
+
     }
-    
-    
-}  
+} 

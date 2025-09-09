@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Automation Projects\\DemoQA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\features\\feature1.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\features\\feature1.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\pages\\elementspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\pages\\elementspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\features\\feature1.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\features\\feature1.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\stepdefinitions\\steps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\stepdefinitions\\steps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\drivers\\driverclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\drivers\\driverclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\pages\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\pages\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|c:\\automation projects\\demoqa\\specflowselenium\\drivers\\driverclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E87BD03-48CC-448D-9197-1CF1823666FF}|SpecflowSelenium\\SpecflowSelenium.csproj|solutionrelative:specflowselenium\\drivers\\driverclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 267,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 381,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,53 +41,44 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DriverClass.cs",
               "DocumentMoniker": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Drivers\\DriverClass.cs",
               "RelativeDocumentMoniker": "SpecflowSelenium\\Drivers\\DriverClass.cs",
               "ToolTip": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Drivers\\DriverClass.cs",
               "RelativeToolTip": "SpecflowSelenium\\Drivers\\DriverClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T10:38:23.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomePage.cs",
-              "DocumentMoniker": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Pages\\HomePage.cs",
-              "RelativeDocumentMoniker": "SpecflowSelenium\\Pages\\HomePage.cs",
-              "ToolTip": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Pages\\HomePage.cs",
-              "RelativeToolTip": "SpecflowSelenium\\Pages\\HomePage.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwAwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T08:47:52.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Feature1.feature",
               "DocumentMoniker": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Features\\Feature1.feature",
               "RelativeDocumentMoniker": "SpecflowSelenium\\Features\\Feature1.feature",
               "ToolTip": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Features\\Feature1.feature",
               "RelativeToolTip": "SpecflowSelenium\\Features\\Feature1.feature",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABwAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAADAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVDhPdVNfSFNhFP/duznd5tRy5N2o1BwoCVJZD0FgulCIXiJqIyiCKIKeequnKGgQ\u002BBSBT770oNtDgv15CKKCGkRgD/WQZCqBcnfnarmcbtO72znfvddNqx/8zs537nd\u002B3znfdybhXxhXfJCwn7x24gb589AxjfOpvPhuwzCMrQIGMaFcInuDyAJOIqNE/EyMIZqaEBELFYG4Ukd2mHidl7WyC8VyCbIkC39NL3CYcROSNIyIqvNCFiETV4nX2Olu7MS78CS6Gzpxse0s3gxM0EmbZ92m0k9YviUQV5rI3iU6drqakFtfQat3D476D\u002BNkIIzVjTXqjvsTcBPv4WlQKNo9DhEbW7278br/MV5qb9H36jR\u002Bln4hmfmAH8WsuauCQ8iX99HvrN3CATaLqypG58bglBzQCkuCX3IzSBczYlMV\u002BHSRYwuISnSjjO/5BZFU0IviAyNU34ZYzy0MKsetiICXjS0wxybka8fD3hgGWo7BX9uMZtcOBOp2wUEVDSn9GOm9LzZbWGBjXm1C6aA7\u002Bko3LXfQacvrOSTDT/BgZhRdDSF0\u002BUI4k7wMj8MDtaBxBr2p0YKoljMriKRmyT7im/62Mg9fTT09tYyP2U94n5lC0K2I9qxkxhgns1M9SEGyz4gHecnPmS0ti0HyON34TU9rIQ3J6ENEm\u002BZFRYAxrvgpMkLeKSJP5nbwfyFC4/zcXG4XYCQCNdTJEeqRp/KCGRRIEa9QMle5ib8FbCQCgzSyL8hbJE7S1juIqmnxrQr/F4gH9lIVPeRNQdZVnFsy41sA/AGfbrS3fsL98AAAAABJRU5ErkJggg==",
               "WhenOpened": "2025-08-21T08:59:06.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ElementsPage.cs",
               "DocumentMoniker": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Pages\\ElementsPage.cs",
               "RelativeDocumentMoniker": "SpecflowSelenium\\Pages\\ElementsPage.cs",
               "ToolTip": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Pages\\ElementsPage.cs",
               "RelativeToolTip": "SpecflowSelenium\\Pages\\ElementsPage.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAADwv6cAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAYwI8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T08:48:40.07Z",
               "EditorCaption": ""
@@ -104,14 +91,14 @@
               "RelativeDocumentMoniker": "SpecflowSelenium\\StepDefinitions\\steps.cs",
               "ToolTip": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\StepDefinitions\\steps.cs",
               "RelativeToolTip": "SpecflowSelenium\\StepDefinitions\\steps.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAcwFsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwFIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T06:08:03.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Hooks.cs",
               "DocumentMoniker": "C:\\Automation Projects\\DemoQA\\SpecflowSelenium\\Hooks\\Hooks.cs",
               "RelativeDocumentMoniker": "SpecflowSelenium\\Hooks\\Hooks.cs",
@@ -125,7 +112,7 @@
           ]
         },
         {
-          "DockedHeight": 133,
+          "DockedHeight": 19,
           "SelectedChildIndex": -1,
           "Children": [
             {

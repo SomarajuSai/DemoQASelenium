@@ -239,14 +239,35 @@ this.ScenarioInitialize(scenarioInfo);
                             "1",
                             "Tst"});
                 table3.AddRow(new string[] {
-                            "KOTI",
-                            "THREE",
-                            "FH@EMAIL.com",
-                            "26",
-                            "2",
-                            "tst"});
+                            "koti",
+                            "three",
+                            "Koti@email.com",
+                            "30",
+                            "5000",
+                            "HR"});
+                table3.AddRow(new string[] {
+                            "Nani",
+                            "four",
+                            "Nani@email.com",
+                            "28",
+                            "4000",
+                            "IT"});
+                table3.AddRow(new string[] {
+                            "Gani",
+                            "five",
+                            "Gani@email.com",
+                            "30",
+                            "5000",
+                            "HR"});
+                table3.AddRow(new string[] {
+                            "mani",
+                            "six",
+                            "mani@email.com",
+                            "28",
+                            "4000",
+                            "IT"});
 #line 26
-    testRunner.And("I add the details in Web Tables", ((string)(null)), table3, "And ");
+    testRunner.When("I add the details in Web Tables", ((string)(null)), table3, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "First Name",
@@ -262,8 +283,36 @@ this.ScenarioInitialize(scenarioInfo);
                             "25",
                             "1",
                             "Tst"});
-#line 33
-    testRunner.Then("I Validate the Regestration Form details", ((string)(null)), table4, "Then ");
+                table4.AddRow(new string[] {
+                            "koti",
+                            "three",
+                            "Koti@email.com",
+                            "30",
+                            "5000",
+                            "HR"});
+                table4.AddRow(new string[] {
+                            "Nani",
+                            "four",
+                            "Nani@email.com",
+                            "28",
+                            "4000",
+                            "IT"});
+                table4.AddRow(new string[] {
+                            "Gani",
+                            "five",
+                            "Gani@email.com",
+                            "30",
+                            "5000",
+                            "HR"});
+                table4.AddRow(new string[] {
+                            "mani",
+                            "six",
+                            "mani@email.com",
+                            "28",
+                            "4000",
+                            "IT"});
+#line 34
+     testRunner.Then("I Validate the Web Table details", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
