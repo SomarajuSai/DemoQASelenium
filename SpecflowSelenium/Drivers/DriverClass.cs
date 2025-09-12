@@ -12,6 +12,7 @@ namespace SpecflowSelenium.Drivers
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(120);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
         }
     }

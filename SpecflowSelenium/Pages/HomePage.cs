@@ -14,7 +14,7 @@ namespace SpecflowSelenium.Pages
 
         public void OpenDemoQA()
         {
-            driver.Navigate().GoToUrl("https://demoqa.com/");
+            driver.Navigate().GoToUrl("https://demoqa.com");
         }
 
         public void ClickOnMenu(string Page)

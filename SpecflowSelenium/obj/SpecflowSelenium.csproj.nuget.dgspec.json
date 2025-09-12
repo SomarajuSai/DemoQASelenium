@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.2.0, )"
@@ -59,7 +63,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.6.0, )"
+              "version": "[4.35.0, )"
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",

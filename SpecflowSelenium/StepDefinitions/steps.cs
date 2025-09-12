@@ -12,6 +12,7 @@ namespace SpecflowSelenium.StepDefinitions
         
         private readonly HomePage homePage = new HomePage();
         private readonly ElementsPage elementsPage = new ElementsPage();
+        private readonly FormsPage formsPage = new FormsPage();
 
       
         [Given(@"Open DEMOQA Website")]
@@ -36,8 +37,16 @@ namespace SpecflowSelenium.StepDefinitions
                 else if (Page == "Web Tables")
                     elementsPage.ClickOnButton(Page);
 
-               
+                else if (Page == "Buttons")
+                    elementsPage.ClickOnButton(Page);
 
+                else if (Page =="Forms")
+                    homePage.ClickOnMenu(Page);
+
+                else if (Page == "Practice Form")
+                    formsPage.ClickOnButton(Page);
+               
+               
             }
 
         } 
@@ -53,6 +62,12 @@ namespace SpecflowSelenium.StepDefinitions
 
             else if ( ExpectedResult == "Web Tables")
                 elementsPage.ValidateTheWebTablePage(ExpectedResult);
+
+            else if (ExpectedResult =="Buttons")
+                elementsPage.ValidateTheButtonsPage(ExpectedResult); 
+
+            else if (ExpectedResult == "Practice Form")
+                formsPage.ValidateThePracticeFormPage(ExpectedResult);
         }
 
 
@@ -87,6 +102,50 @@ namespace SpecflowSelenium.StepDefinitions
             elementsPage.ValidateTheWebTableDetails(table);
         }
 
+        [When(@"I Search for ""([^""]*)""")]
+        public void WhenISearchFor(string keyword)
+        {
+            elementsPage.SearchWebTable(keyword);
+        }
+
+        [Then(@"I Validate the First Name '([^']*)'")]
+        public void ThenIValidateTheFirstName(string FirstName)
+        {
+            elementsPage.ValidateTheFirstName(FirstName);
+        }
+
+        [When(@"I Click '([^']*)'")]
+        public void WhenIClick(string Action)
+        {
+            if (Action == "Double Click Me")
+                elementsPage.DoubleClickButton(Action);
+
+            else if (Action == "Right Click Me")
+                elementsPage.RightClickButton(Action);
+
+            else if (Action == "Click Me")
+                elementsPage.ClickButton(Action);
+
+        }
+
+        [Then(@"I Validate the text '([^']*)'")]
+        public void ThenIValidateTheText(string ExpectedText)
+        {
+            if (ExpectedText == "You have done a double click")
+            elementsPage.ValidateTheDoubleClickText(ExpectedText);
+
+            else if (ExpectedText == "You have done a right click")
+                elementsPage.ValidateRightClickText(ExpectedText);
+
+            else if (ExpectedText == "You have done a dynamic click")
+                elementsPage.ValidateTheClickText(ExpectedText);
+        }
+
+        [When(@"I eneter the details in Practice Form")]
+        public void WhenIEneterTheDetailsInPracticeForm(Table deatails)
+        {
+            formsPage.EnterTheDetailsInPracticeForm(deatails);
+        }
 
     }
 }

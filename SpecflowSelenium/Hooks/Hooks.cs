@@ -13,10 +13,14 @@ namespace SpecflowSelenium.Hooks
             driverInitializer();
         }
 
-        //[AfterScenario]
-        //public void AfterScenario()
-        //{
-        //    driver?.Quit();
-        //}
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            //if (driver != null)
+            //{
+            //    driver.Quit();
+            //    driver.Dispose();
+            //}
+        }
     }
 }

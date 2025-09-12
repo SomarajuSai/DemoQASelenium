@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using SpecflowSelenium.Drivers;
 using System;
 using System.Collections.Generic;
@@ -170,6 +171,74 @@ namespace SpecflowSelenium.Pages
                 Assert.AreEqual(expectedRow["Department"], actualDepartment, $"❌ Department mismatch at row {i + 1}");
             }
         }
+        private By searchBox = By.Id("searchBox");
 
+        public void SearchWebTable(string keyword)
+        {
+            var box = driver.FindElement(searchBox);
+            
+            box.SendKeys(keyword);
+            Thread.Sleep(1000);
+            box.Clear();
+         
+        }
+
+        public void ValidateTheFirstName(string FirstName)
+        {
+
+            var actualElement = driver.FindElement(By.XPath("//div[@class='rt-td' and @role='gridcell']"));
+            var actualFunctionName = actualElement.Text.Trim();
+
+            Assert.AreEqual(FirstName, actualFunctionName,
+                $"❌ Expected function name to be '{FirstName}' but found '{actualFunctionName}'");
+        }
+
+        public void ValidateTheButtonsPage(string ExpectedResult)
+        {
+            var actualFunctionName = driver.FindElement(By.XPath("//h1[@class='text-center']")).Text;
+            Assert.AreEqual(ExpectedResult, actualFunctionName,
+            $"Expected function name to be '{ExpectedResult}' but found '{actualFunctionName}'");
+        }
+
+        public void DoubleClickButton(string Action)
+        {
+            Actions actions = new Actions(driver);
+            IWebElement doubleClickBtn = driver.FindElement(By.XPath("//button[text()='Double Click Me']"));
+            actions.DoubleClick(doubleClickBtn).Perform();
+
+        }
+
+        public void RightClickButton(string Action)
+        {
+            Actions actions = new Actions(driver);
+            IWebElement rightClickBtn = driver.FindElement(By.XPath("//button[text()='Right Click Me']"));
+            actions.ContextClick(rightClickBtn).Perform();
+        }
+
+        public void ClickButton(string Action)
+        {
+
+            driver.FindElement(By.XPath("//button[text()='Click Me']")).Click();
+
+        }
+
+        public void ValidateTheDoubleClickText(string ExpectedText)
+        {
+            string actualText = driver.FindElement(By.XPath("//p[text()='You have done a double click']")).Text.Trim();
+            Assert.AreEqual(ExpectedText, actualText, $"❌ Expected text '{ExpectedText}', but found '{actualText}'");
+
+        }
+
+        public void ValidateRightClickText(string ExpectedText)
+        {
+            string actualText = driver.FindElement(By.XPath("//p[text()='You have done a right click']")).Text.Trim();
+            Assert.AreEqual(ExpectedText, actualText, $"❌ Expected text '{ExpectedText}', but found '{actualText}'");
+        }
+
+        public void ValidateTheClickText(String ExpectedText)
+        {
+            string actualText = driver.FindElement(By.XPath("//p[text()='You have done a dynamic click']")).Text.Trim();
+            Assert.AreEqual(ExpectedText, actualText, $"❌ Expected text '{ExpectedText}', but found '{actualText}'");
+        }
     }
 } 
