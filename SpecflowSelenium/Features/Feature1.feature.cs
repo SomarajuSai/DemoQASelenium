@@ -440,7 +440,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "raj@example.com",
                             "Male",
                             "9876543210",
-                            "11 Sep 2025",
+                            "09 Jul 1998",
                             "Maths,Physics",
                             "Sports",
                             "sampleFile.jpeg",

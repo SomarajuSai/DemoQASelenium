@@ -191,6 +191,8 @@ namespace SpecflowSelenium.Pages
 
             Assert.AreEqual(FirstName, actualFunctionName,
                 $"❌ Expected function name to be '{FirstName}' but found '{actualFunctionName}'");
+
+            
         }
 
         public void ValidateTheButtonsPage(string ExpectedResult)
@@ -226,6 +228,7 @@ namespace SpecflowSelenium.Pages
         {
             string actualText = driver.FindElement(By.XPath("//p[text()='You have done a double click']")).Text.Trim();
             Assert.AreEqual(ExpectedText, actualText, $"❌ Expected text '{ExpectedText}', but found '{actualText}'");
+            Console.WriteLine(ExpectedText);
 
         }
 

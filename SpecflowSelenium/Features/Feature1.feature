@@ -58,7 +58,7 @@ Scenario:Forms
     Then I Validate the page 'Practice Form'
     When I eneter the details in Practice Form
     | FirstName | LastName | Email           | Gender | Mobile     | DOB        | Subjects      | Hobbies| Picture         | Address                    | State | City  |
-    | Raj       | Kumar    | raj@example.com | Male   | 9876543210 | 11 Sep 2025| Maths,Physics | Sports | sampleFile.jpeg | Ayyappa Society, Madhapur  | NCR   | Delhi |
+    | Raj       | Kumar    | raj@example.com | Male   | 9876543210 | 09 Jul 1998 | Maths,Physics | Sports | sampleFile.jpeg | Ayyappa Society, Madhapur  | NCR   | Delhi |
 
 
     

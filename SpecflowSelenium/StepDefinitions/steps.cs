@@ -142,9 +142,9 @@ namespace SpecflowSelenium.StepDefinitions
         }
 
         [When(@"I eneter the details in Practice Form")]
-        public void WhenIEneterTheDetailsInPracticeForm(Table deatails)
+        public void WhenIEneterTheDetailsInPracticeForm(Table details)
         {
-            formsPage.EnterTheDetailsInPracticeForm(deatails);
+            formsPage.EnterTheDetailsInPracticeForm(details);
         }
 
     }

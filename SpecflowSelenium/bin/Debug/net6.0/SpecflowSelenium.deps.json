@@ -8,15 +8,14 @@
     ".NETCoreApp,Version=v6.0": {
       "SpecflowSelenium/1.0.0": {
         "dependencies": {
-          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "FluentAssertions": "6.2.0",
           "Microsoft.NET.Test.Sdk": "17.0.0",
           "NUnit3TestAdapter": "4.1.0",
-          "Selenium.WebDriver": "4.35.0",
-          "Selenium.WebDriver.ChromeDriver": "140.0.7339.8000",
+          "Selenium.Support": "4.29.0",
+          "Selenium.WebDriver": "4.29.0",
           "SpecFlow.NUnit": "3.9.40",
           "SpecFlow.Plus.LivingDocPlugin": "3.9.57",
-          "WebDriverManager": "2.17.6",
+          "WebDriverManager": "2.17.5",
           "NUnit": "3.13.2"
         },
         "runtime": {
@@ -39,17 +38,6 @@
           "lib/netstandard2.0/BoDi.dll": {
             "assemblyVersion": "1.5.0.0",
             "fileVersion": "1.5.0.0"
-          }
-        }
-      },
-      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
-        "dependencies": {
-          "Selenium.WebDriver": "4.35.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
-            "assemblyVersion": "3.11.0.0",
-            "fileVersion": "3.11.0.0"
           }
         }
       },
@@ -449,7 +437,18 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
-      "Selenium.WebDriver/4.35.0": {
+      "Selenium.Support/4.29.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.29.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.29.0": {
         "dependencies": {
           "System.Text.Json": "8.0.5"
         },
@@ -458,26 +457,8 @@
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.0"
           }
-        },
-        "runtimeTargets": {
-          "runtimes/linux/native/selenium-manager": {
-            "rid": "linux",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx/native/selenium-manager": {
-            "rid": "osx",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win/native/selenium-manager.exe": {
-            "rid": "win",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/140.0.7339.8000": {},
       "SharpZipLib/1.4.2": {
         "runtime": {
           "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
@@ -1088,7 +1069,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "WebDriverManager/2.17.6": {
+      "WebDriverManager/2.17.5": {
         "dependencies": {
           "AngleSharp": "1.1.2",
           "Microsoft.Win32.Registry": "5.0.0",
@@ -1097,8 +1078,8 @@
         },
         "runtime": {
           "lib/netstandard2.1/WebDriverManager.dll": {
-            "assemblyVersion": "2.17.6.0",
-            "fileVersion": "2.17.6.0"
+            "assemblyVersion": "2.17.5.0",
+            "fileVersion": "2.17.5.0"
           }
         }
       }
@@ -1123,13 +1104,6 @@
       "sha512": "sha512-CzIPzdIAFSd2zuLxI+0K9s48Qv3HQDbWiApn9h96j284rHs2bSPrn/PMca3mi4q3xLSEqOp+GUJ6+mXDD9prKg==",
       "path": "bodi/1.5.0",
       "hashPath": "bodi.1.5.0.nupkg.sha512"
-    },
-    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
-      "path": "dotnetseleniumextras.waithelpers/3.11.0",
-      "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
     },
     "FluentAssertions/6.2.0": {
       "type": "package",
@@ -1348,19 +1322,19 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
     },
-    "Selenium.WebDriver/4.35.0": {
+    "Selenium.Support/4.29.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-C9OrObS2KLyUQDJNRY883JAc4n5q58pBYmY954hf+lGMQQcsz4Ias2mk91lHkLXFX+2qMttya4df9lGP1SLiGQ==",
-      "path": "selenium.webdriver/4.35.0",
-      "hashPath": "selenium.webdriver.4.35.0.nupkg.sha512"
+      "sha512": "sha512-Edeldo2R/H4mfh1CW1YNr8g8ASnF/5d9YlvBKtAW93dMImnzaQ47eHbMjoJp4kU4CeyQ22UA300d7VFutzddmw==",
+      "path": "selenium.support/4.29.0",
+      "hashPath": "selenium.support.4.29.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/140.0.7339.8000": {
+    "Selenium.WebDriver/4.29.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WEKtKwq/ZrADkml+niKVOVgJhSO2qUOPfU5vC5qTcfEXd+c4mDxD9gsxjyusqWmVc7dSxKa2eSoDKyXoFP3ImQ==",
-      "path": "selenium.webdriver.chromedriver/140.0.7339.8000",
-      "hashPath": "selenium.webdriver.chromedriver.140.0.7339.8000.nupkg.sha512"
+      "sha512": "sha512-bxUeeyGPoPFqqZX/RQAmcuE8fvdi08ep9519rFpONfC/rmBemezfCbbwDKPLE0xkb/cW1asH5WbDYLXs5giVeg==",
+      "path": "selenium.webdriver/4.29.0",
+      "hashPath": "selenium.webdriver.4.29.0.nupkg.sha512"
     },
     "SharpZipLib/1.4.2": {
       "type": "package",
@@ -1775,12 +1749,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "WebDriverManager/2.17.6": {
+    "WebDriverManager/2.17.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TyelgYIuQsa3i8gbJPJ6kPnsD7q74fFcGN6gHhIs3Vmm0DvbKd/2+aV9E/LdgcOLOo+mFJu0dgz5PfhJNooH4w==",
-      "path": "webdrivermanager/2.17.6",
-      "hashPath": "webdrivermanager.2.17.6.nupkg.sha512"
+      "sha512": "sha512-gxCxFF+SxBdb1/oC0WNIPZkxT/WsfKcw4rHsB266f/fJbEmvsEIn/CodTreDIdgkB1nPlRK4qw7SE0wIcKyiBQ==",
+      "path": "webdrivermanager/2.17.5",
+      "hashPath": "webdrivermanager.2.17.5.nupkg.sha512"
     }
   }
 }
